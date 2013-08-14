@@ -1,0 +1,24 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Your vagrant box
+$box_configuration = "precise32"
+
+# Your vagrant box name
+$box_name_configuration = "VagrantSymfony"
+
+# Uncomment the next line if your box is not added yet
+# $box_url_configuration = "http://files.vagrantup.com/precise32.box"
+
+# Your vagrant box private network ip
+$box_ip_configuration = "192.168.66.66"
+
+# Your vagrant box host access port
+$box_hostport_configuration = 8030
+
+# Your vagrant box memory
+$box_memory_configuration = 1024
+
+# The symfony path in the vagrant box and his version
+$symfony_path_configuration = "sfproject"
+$symfony_version_configuration = "2.3.3"
