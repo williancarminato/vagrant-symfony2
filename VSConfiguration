@@ -21,4 +21,4 @@ $box_memory_configuration = 1024
 
 # The symfony path in the vagrant box and his version
 $symfony_path_configuration = "sfproject"
-$symfony_version_configuration = "2.3.3"
+$symfony_version_configuration = "2.3.4"

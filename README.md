@@ -38,7 +38,7 @@ $box_memory_configuration = 1024
 # O diretório do symfony e a sua versão
 # O nome do path aqui DEVE ser o mesmo do arquivo manifests/parameters.pp
 $symfony_path_configuration = "sfproject"
-$symfony_version_configuration = "2.3.3"
+$symfony_version_configuration = "2.3.4"
 ```
 
 E também no arquivo manifests/parameters.pp
