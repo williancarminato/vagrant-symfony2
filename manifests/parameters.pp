@@ -1,7 +1,7 @@
 class parameters {
     # Hostname of your project
-    $hostname = 'sfproject.dev'
+    $hostname = 'webproject.dev'
 
     # The project document root
-    $documentroot = '/var/www/sfproject/web'
+    $documentroot = '/var/www/webproject/web'
 }

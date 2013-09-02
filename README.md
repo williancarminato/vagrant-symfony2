@@ -37,7 +37,8 @@ $box_memory_configuration = 1024
 
 # O diretório do symfony e a sua versão
 # O nome do path aqui DEVE ser o mesmo do arquivo manifests/parameters.pp
-$symfony_path_configuration = "sfproject"
+$get_symfony = "yes"
+$symfony_path_configuration = "webproject"
 $symfony_version_configuration = "2.3.4"
 ```
 
@@ -46,11 +47,10 @@ E também no arquivo manifests/parameters.pp
 ```
 class parameters {
     # O hostname do seu projeto
-    $hostname = 'sfproject.dev'
+    $hostname = 'webproject.dev'
 
-    # A pasta raiz do seu projeto, troque apenas se houver alterado a
-    # $symfony_path_configuration
-    $documentroot = '/var/www/sfproject/web'
+    # O diretório raiz do seu projeto
+    $documentroot = '/var/www/webproject/web'
 }
 ```
 
@@ -64,11 +64,13 @@ Quando terminar, faça o apontamento na sua máquina host para o ip que você co
 # /etc/hosts
 
 # Vagrant
-192.168.66.66   sfproject.dev
+192.168.66.66   webproject.dev
 ```
 
-Por último abra o arquivo `app_dev.php` dentro da pasta web do Symfony e comente o bloqueio por ip.
+Por último abra o arquivo `app_dev.php` dentro do diretório web do Symfony e comente o bloqueio por ip.
 
-Abra o navegador e acesse: `http://sfproject.dev/app_dev.php/`
+Abra o navegador e acesse: `http://webproject.dev/app_dev.php/`
 
 E pronto, você tem uma VM Vagrant com o framework Symfony já instalado!
+
+Obs: Caso você tenha optado por não instalar o Symfony basta criar o diretório que você definiu em `$documentroot` e acessar `http://webproject.dev/` .

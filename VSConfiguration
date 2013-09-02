@@ -20,5 +20,6 @@ $box_hostport_configuration = 8030
 $box_memory_configuration = 1024
 
 # The symfony path in the vagrant box and his version
-$symfony_path_configuration = "sfproject"
+$get_symfony = "yes"
+$symfony_path_configuration = "webproject"
 $symfony_version_configuration = "2.3.4"

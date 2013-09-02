@@ -34,8 +34,10 @@ controluser_password=awesome" > /etc/phpmyadmin.facts;'
     puppet.options = ['--verbose']
   end
 
-  config.vm.provision :shell do |s|
-    s.path = "files/symfony.sh"
-    s.args = "#$symfony_path_configuration #$symfony_version_configuration"
+  if $get_symfony == "yes"
+    config.vm.provision :shell do |s|
+      s.path = "files/symfony.sh"
+      s.args = "#$symfony_path_configuration #$symfony_version_configuration"
+    end
   end
 end
